@@ -6,6 +6,15 @@ const nextConfig: NextConfig = {
   // experimental: {
   //   ppr: "incremental"
   // }
+  async rewrites() {
+    return [
+      {
+        source: '/api/auth/:path*',
+        destination: "/"
+      }
+    ]
+  }
 };
+
 
 export default nextConfig;

@@ -125,11 +125,7 @@ export async function authenticate(
  formData: FormData, 
 ) {
   try {
-    await signIn('credentials', {
-      ...formData,
-      redirect: true,
-      callbackUrl: '/dashboard'
-    });   
+    await signIn('credentials', formData);   
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
