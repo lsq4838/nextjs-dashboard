@@ -1,6 +1,9 @@
 import React from 'react'
 import SideNav from '@/app/ui/dashboard/sidenav'
 
+// ppr-部分预渲染（partial prerenderring）
+// export const experimental_ppr = true;
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
